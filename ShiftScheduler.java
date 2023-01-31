@@ -281,35 +281,41 @@ public class ShiftScheduler {
 			}
 		}
 
-		// Call the function to generate feasible EMT-1 and FTO pairs
-		ArrayList<Employee> pairs = generateMatchings(emt1, fto);
+		// Execute the program only if there are an equal number of EMT-1s and FTOs
+		if (emt1.size() != fto.size()) {
+			System.out.println("Error: cannot generate schedule");
+			System.out.println("The number of FTOs and EMT-1s are not equal");
+		} else {
+			// Call the function to generate feasible EMT-1 and FTO pairs
+			ArrayList<Employee> pairs = generateMatchings(emt1, fto);
 
-		// Add EMT-2s and EMT-1/FTO pairs into one Employee array
-		Employee[] employees = new Employee[emt2.size() + pairs.size()];
-		for (int x = 0; x < emt2.size(); x++) {
-			employees[x] = emt2.get(x);
+			// Add EMT-2s and EMT-1/FTO pairs into one Employee array
+			Employee[] employees = new Employee[emt2.size() + pairs.size()];
+			for (int x = 0; x < emt2.size(); x++) {
+				employees[x] = emt2.get(x);
+			}
+			for (int x = 0; x < pairs.size(); x++) {
+				employees[x + emt2.size()] = pairs.get(x);
+			}
+
+			// Sort the employees by increasing availability to simplify scheduling
+			employees = sortByAvailability(employees);
+
+			// Create ShiftScheduler object
+			ShiftScheduler shiftScheduler = new ShiftScheduler(employees);
+			shiftScheduler.scheduleShifts(); // Assign all the shifts
+
+			// Print out the EMT-1/FTO pairs that were generated
+			System.out.println("FTO and EMT-1 Pairs:");
+			System.out.println("Pairs generated: " + pairs.size() + "\n");
+			for (Employee e : pairs) {
+				System.out.println(e);
+			}
+			System.out.println("\n");
+
+			// Print out the schedule that was generated
+			shiftScheduler.printSchedule();
 		}
-		for (int x = 0; x < pairs.size(); x++) {
-			employees[x + emt2.size()] = pairs.get(x);
-		}
-
-		// Sort the employees by increasing availability to simplify scheduling
-		employees = sortByAvailability(employees);
-
-		// Create ShiftScheduler object
-		ShiftScheduler shiftScheduler = new ShiftScheduler(employees);
-		shiftScheduler.scheduleShifts(); // Assign all the shifts
-
-		// Print out the EMT-1/FTO pairs that were generated
-		System.out.println("FTO and EMT-1 Pairs:");
-		System.out.println("Pairs generated: " + pairs.size() + "\n");
-		for (Employee e : pairs) {
-			System.out.println(e);
-		}
-		System.out.println("\n");
-
-		// Print out the schedule that was generated
-		shiftScheduler.printSchedule();
 	}
 
 	// This method generates a list of pairings between EMT-1s and FTOs
@@ -394,7 +400,7 @@ public class ShiftScheduler {
 				lines.add(line);
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("Error while reading input file");
 		}
 		return lines;
 	}
@@ -422,10 +428,27 @@ class Employee {
 		availability = new ArrayList<>();
 		active = new ArrayList<>();
 
-		// Assign the inputted availability to the employee
-		for (int i = 3; i < parameters.length; i++) {
-			availability.add(Integer.parseInt(parameters[i]));
-			active.add(false); // The employee isn't working any shift yet, so every availability is false
+		// Assign the inputted availability to the employee (if its between 0-34)
+		if (this.type.equals("EMT-1") || this.type.equals("EMT-2") || this.type.equals("FTO")) {
+			for (int i = 3; i < parameters.length; i++) {
+				try {
+					int avail = Integer.parseInt(parameters[i]); // Holds current availability to add
+					if (avail < 0 || avail > 34) {
+						System.out.println(
+								this.name + " has an invalid availability: " + Integer.parseInt(parameters[i]));
+						System.out.println("This invalid availability was ignored when assigning shifts\n\n");
+					} else {
+						availability.add(avail);
+						active.add(false); // The employee isn't working any shift yet, so every availability is false
+					}
+				} catch (Exception e) {
+					System.out.println(this.name + " has an invalid availability: " + parameters[i]);
+					System.out.println("This invalid availability was ignored when assigning shifts\n\n");
+				}
+			}
+		} else {
+			System.out.println(this.name + " has an invalid rank of: " + this.type);
+			System.out.println("They were not assigned any shifts\n\n");
 		}
 	}
 
