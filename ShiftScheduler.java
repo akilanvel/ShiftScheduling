@@ -14,8 +14,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-// TODO: if no other slot available, some employees work the same shift as their 2 shifts (Akilan and Akshitha)
-
 public class ShiftScheduler {
 	private Employee[] employees; // Holds list of employees (sorted by increasing availability)
 	private Employee[][] shiftAssignments; // Holds all shift assignments (35 x 2)
@@ -141,6 +139,16 @@ public class ShiftScheduler {
 				}
 			}
 		}
+	}
+
+	// This method returns whether every shift in the schedule is covered
+	public boolean isFullyStaffed() {
+		for (int shift : listOfShifts) {
+			if (numEmployeesOnShift(shift) == 0) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 	// This method returns the list of unassigned employees
@@ -312,15 +320,25 @@ public class ShiftScheduler {
 			shiftScheduler = new ShiftScheduler(employees);
 			shiftScheduler.scheduleShifts(); // Assign all the shifts
 			numUnassigned = shiftScheduler.numUnassigned();
+			boolean fullyStaffed = shiftScheduler.isFullyStaffed();
 
 			// Let the user know whether a full schedule could be generated
-			if (numUnassigned == 0) {
+			if (numUnassigned == 0 && fullyStaffed) {
 				System.out.println("A full schedule was generated using the availabilities:\n\n");
+			} else if (numUnassigned == 0 && !fullyStaffed) {
+				System.out.println(
+						"Everyone was assigned a shift, but the program could find coverage for every shift\n\n");
+			} else if (fullyStaffed && numUnassigned > 0) {
+				System.out.println("The program could assign everyone a shift with current availabilities");
+				System.out.println("EMTs with unassigned shfits are listed at the bottom");
+				System.out.println("However, the program was able to find coverage for every shift\n\n");
 			} else {
 				System.out.println("After running the program, a full schedule could not be generated");
+				System.out.println("The program could not cover every shift with current availabilities");
 				System.out.println("EMTs with unassigned shifts are listed at the bottom");
 				System.out.println("You may run the program again to generate a different schedule\n\n");
 			}
+			
 			// Print out the EMT-1/FTO pairs that were generated
 			System.out.println("FTO and EMT-1 Pairs:");
 			System.out.println("Pairs generated: " + pairs.size() + "\n");
