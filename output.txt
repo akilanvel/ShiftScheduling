@@ -6,62 +6,69 @@ Made for UEMR
 ------------------------------------------
 
 
+Running...
+
+
+A full schedule was generated using the availabilities:
+
+
 FTO and EMT-1 Pairs:
 Pairs generated: 18
 
-Khadeeja and Daphnne
-Alicia and Ajay
-Hanak and Sanjana
-Chi and Ibrahim
-Chika and Willow
-Raluca and Rana
-Avni and Nitin
-Mrudula and Amy
-Ani and Chandralekha
-Shabbir and Hitankshini
-Fatema and Akshitha
-Akilan and Deepa
-Aru and Pranav
+Alicia and Chandralekha
+Aman and Victoria
 Rohita and Divya
-Rakshak and Victoria
-Durga and Hamshitha
-Lexis and Deepti
-Aman and Cyric
+Rakshak and Cyric
+Ani and Akshitha
+Hanak and Ajay
+Khadeeja and Daphnne
+Chi and Ibrahim
+Lexis and Willow
+Akilan and Deepa
+Avni and Deepti
+Shabbir and Hitankshini
+Raluca and Rana
+Aru and Amy
+Chika and Hamshitha
+Fatema and Nitin
+Durga and Pranav
+Mrudula and Sanjana
 
 
 Full Schedule:
 Monday 8:20 AM to 11:20 AM:	
 Monday 11:20 AM to 2:20 PM:		Raluca and Rana, 
 Monday 2:20 PM to 5:20 PM:		Chi and Ibrahim, Akilan and Deepa, 
-Monday 5:20 PM to 8:20 PM:		Fatema and Akshitha, Fatema and Akshitha, 
-Monday 8:20 PM to 11:20 PM:		Lexis and Deepti, Hanak and Sanjana, 
+Monday 5:20 PM to 8:20 PM:		Mahabad B, Fatema and Nitin, 
+Monday 8:20 PM to 11:20 PM:		Lexis and Willow, Hanak and Ajay, 
 Tuesday 8:20 AM to 11:20 AM:		Khadeeja and Daphnne, Yusuf M, 
 Tuesday 11:20 AM to 2:20 PM:		Shabbir and Hitankshini, Jessica K, 
-Tuesday 2:20 PM to 5:20 PM:		Lexis and Deepti, Aman and Cyric, 
-Tuesday 5:20 PM to 8:20 PM:		Aman and Cyric, Soujanya N, 
-Tuesday 8:20 PM to 11:20 PM:		Alicia and Ajay, Ani and Chandralekha, 
+Tuesday 2:20 PM to 5:20 PM:		Lexis and Willow, Avni and Deepti, 
+Tuesday 5:20 PM to 8:20 PM:		Aman and Victoria, Soujanya N, 
+Tuesday 8:20 PM to 11:20 PM:		Fatema and Nitin, Alicia and Chandralekha, 
 Wednesday 8:20 AM to 11:20 AM:	Areeba H, 
-Wednesday 11:20 AM to 2:20 PM:	Mahabad B, Rakshak and Victoria, 
+Wednesday 11:20 AM to 2:20 PM:	Rakshak and Cyric, Syed R, 
 Wednesday 2:20 PM to 5:20 PM:		Chi and Ibrahim, Raluca and Rana, 
-Wednesday 5:20 PM to 8:20 PM:		Michael A, Avni and Nitin, 
-Wednesday 8:20 PM to 11:20 PM:	Alicia and Ajay, Durga and Hamshitha, 
+Wednesday 5:20 PM to 8:20 PM:		Ani and Akshitha, Mrudula and Sanjana, 
+Wednesday 8:20 PM to 11:20 PM:	Michael A, Alicia and Chandralekha, 
 Thursday 8:20 AM to 11:20 AM:		Khadeeja and Daphnne, Ashwin K, 
 Thursday 11:20 AM to 2:20 PM:		Shabbir and Hitankshini, 
-Thursday 2:20 PM to 5:20 PM:		Aadil R, Crystal P, 
-Thursday 5:20 PM to 8:20 PM:		Hana K, Sruthi N, 
-Thursday 8:20 PM to 11:20 PM:		Rakshak and Victoria, Ani and Chandralekha, 
+Thursday 2:20 PM to 5:20 PM:		Rakshak and Cyric, Amogh B, 
+Thursday 5:20 PM to 8:20 PM:		Hana K, Aman and Victoria, 
+Thursday 8:20 PM to 11:20 PM:		Ani and Akshitha, Sruthi N, 
 Friday 8:20 AM to 11:20 AM:		Armaan S, Hana A, 
 Friday 11:20 AM to 2:20 PM:		Tisha G, 
-Friday 2:20 PM to 5:20 PM:		Andrew V, Sylvie T, 
-Friday 5:20 PM to 8:20 PM:		Akilan and Deepa, Mrudula and Amy, 
-Friday 8:20 PM to 11:20 PM:		Hanak and Sanjana, Mrudula and Amy, 
-Saturday 8:20 AM to 11:20 AM:		Aru and Pranav, Sruthi P, 
-Saturday 11:20 AM to 2:20 PM:		Durga and Hamshitha, Aru and Pranav, 
-Saturday 2:20 PM to 5:20 PM:		Chika and Willow, 
+Friday 2:20 PM to 5:20 PM:		Andrew V, Crystal P, 
+Friday 5:20 PM to 8:20 PM:		Akilan and Deepa, Hanak and Ajay, 
+Friday 8:20 PM to 11:20 PM:		Mrudula and Sanjana, Aru and Amy, 
+Saturday 8:20 AM to 11:20 AM:		Sruthi P, Sylvie T, 
+Saturday 11:20 AM to 2:20 PM:		Aadil R, Aru and Amy, 
+Saturday 2:20 PM to 5:20 PM:		Chika and Hamshitha, 
 Saturday 5:20 PM to 8:20 PM:	
-Saturday 8:20 PM to 11:20 PM:		Chika and Willow, 
-Sunday 8:20 AM to 11:20 AM:		Jagannath R, 
-Sunday 11:20 AM to 2:20 PM:		Avni and Nitin, 
-Sunday 2:20 PM to 5:20 PM:		Rohita and Divya, 
+Saturday 8:20 PM to 11:20 PM:		Jagannath R, 
+Sunday 8:20 AM to 11:20 AM:	
+Sunday 11:20 AM to 2:20 PM:		Avni and Deepti, Durga and Pranav, 
+Sunday 2:20 PM to 5:20 PM:		Rohita and Divya, Chika and Hamshitha, 
 Sunday 5:20 PM to 8:20 PM:		Rohita and Divya, 
-Sunday 8:20 PM to 11:20 PM:		Amogh B, 
+Sunday 8:20 PM to 11:20 PM:		Durga and Pranav, 
+
