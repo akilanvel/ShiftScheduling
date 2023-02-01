@@ -14,6 +14,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
+// TODO: if no other slot available, some employees work the same shift as their 2 shifts (Akilan and Akshitha)
+
 public class ShiftScheduler {
 	private Employee[] employees; // Holds list of employees (sorted by increasing availability)
 	private Employee[][] shiftAssignments; // Holds all shift assignments (35 x 2)
@@ -136,7 +138,6 @@ public class ShiftScheduler {
 				if (notPossible) { // if shift swapping based on availabilities wasn't possible:
 					unAssigned += "Unable to assign shift for " + employee.getName() + "\n";
 					numUnassigned++;
-
 				}
 			}
 		}
@@ -250,6 +251,7 @@ public class ShiftScheduler {
 			}
 			System.out.println();
 		}
+		System.out.println(unAssigned);
 	}
 
 	public static void main(String[] args) {
@@ -286,8 +288,13 @@ public class ShiftScheduler {
 			System.out.println("Error: cannot generate schedule");
 			System.out.println("The number of FTOs and EMT-1s are not equal");
 		} else {
+			int numUnassigned = 0;
+			ShiftScheduler shiftScheduler = new ShiftScheduler(new Employee[2]);
+			ArrayList<Employee> pairs = new ArrayList<>();
+			System.out.println("Running...\n\n");
+
 			// Call the function to generate feasible EMT-1 and FTO pairs
-			ArrayList<Employee> pairs = generateMatchings(emt1, fto);
+			pairs = generateMatchings(emt1, fto);
 
 			// Add EMT-2s and EMT-1/FTO pairs into one Employee array
 			Employee[] employees = new Employee[emt2.size() + pairs.size()];
@@ -302,9 +309,18 @@ public class ShiftScheduler {
 			employees = sortByAvailability(employees);
 
 			// Create ShiftScheduler object
-			ShiftScheduler shiftScheduler = new ShiftScheduler(employees);
+			shiftScheduler = new ShiftScheduler(employees);
 			shiftScheduler.scheduleShifts(); // Assign all the shifts
+			numUnassigned = shiftScheduler.numUnassigned();
 
+			// Let the user know whether a full schedule could be generated
+			if (numUnassigned == 0) {
+				System.out.println("A full schedule was generated using the availabilities:\n\n");
+			} else {
+				System.out.println("After running the program, a full schedule could not be generated");
+				System.out.println("EMTs with unassigned shifts are listed at the bottom");
+				System.out.println("You may run the program again to generate a different schedule\n\n");
+			}
 			// Print out the EMT-1/FTO pairs that were generated
 			System.out.println("FTO and EMT-1 Pairs:");
 			System.out.println("Pairs generated: " + pairs.size() + "\n");
