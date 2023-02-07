@@ -9,70 +9,66 @@ Made for UEMR
 Running...
 
 
-After running the program, a full schedule could not be generated
-The program could not cover every shift with current availabilities
-EMTs with unassigned shifts are listed at the bottom
-You may run the program again to generate a different schedule
+Everyone was assigned a shift, but the program could find coverage for every shift
 
 
 FTO and EMT-1 Pairs:
 Pairs generated: 18
 
-Mrudula and Victoria
-Rohita and Deepti
-Khadeeja and Daphnne
-Aru and Ajay
-Ani and Hamshitha
-Alicia and Divya
-Chi and Ibrahim
-Durga and Amy
-Lexis and Pranav
-Hanak and Sanjana
-Aman and Nitin
-Rakshak and Cyric
-Avni and Willow
-Raluca and Rana
-Chika and Chandralekha
 Akilan and Deepa
-Fatema and Akshitha
+Raluca and Rana
+Alicia and Cyric
+Ani and Amy
+Chika and Sanjana
+Rakshak and Willow
+Durga and Victoria
+Fatema and Pranav
+Chi and Ibrahim
+Hanak and Nitin
+Khadeeja and Daphnne
+Mrudula and Divya
+Aru and Hamshitha
+Rohita and Chandralekha
+Aman and Akshitha
 Shabbir and Hitankshini
+Lexis and Deepti
+Avni and Ajay
 
 
 Full Schedule:
 Monday 8:20 AM to 11:20 AM:	
 Monday 11:20 AM to 2:20 PM:		Raluca and Rana, 
 Monday 2:20 PM to 5:20 PM:		Chi and Ibrahim, Akilan and Deepa, 
-Monday 5:20 PM to 8:20 PM:		Fatema and Akshitha, Fatema and Akshitha, 
-Monday 8:20 PM to 11:20 PM:		Lexis and Pranav, Hanak and Sanjana, 
+Monday 5:20 PM to 8:20 PM:		Mahabad B, Fatema and Pranav, 
+Monday 8:20 PM to 11:20 PM:		Lexis and Deepti, Hanak and Nitin, 
 Tuesday 8:20 AM to 11:20 AM:		Khadeeja and Daphnne, Yusuf M, 
 Tuesday 11:20 AM to 2:20 PM:		Shabbir and Hitankshini, Jessica K, 
-Tuesday 2:20 PM to 5:20 PM:		Lexis and Pranav, Avni and Willow, 
-Tuesday 5:20 PM to 8:20 PM:		Soujanya N, Aru and Ajay, 
-Tuesday 8:20 PM to 11:20 PM:		Ani and Hamshitha, Alicia and Divya, 
+Tuesday 2:20 PM to 5:20 PM:		Lexis and Deepti, Soujanya N, 
+Tuesday 5:20 PM to 8:20 PM:		Aman and Akshitha, Avni and Ajay, 
+Tuesday 8:20 PM to 11:20 PM:		Alicia and Cyric, Ani and Amy, 
 Wednesday 8:20 AM to 11:20 AM:	Areeba H, 
-Wednesday 11:20 AM to 2:20 PM:	Rakshak and Cyric, Mahabad B, 
-Wednesday 2:20 PM to 5:20 PM:		Chi and Ibrahim, Raluca and Rana, 
-Wednesday 5:20 PM to 8:20 PM:		Michael A, Aman and Nitin, 
-Wednesday 8:20 PM to 11:20 PM:	Ani and Hamshitha, Alicia and Divya, 
+Wednesday 11:20 AM to 2:20 PM:	Syed R, Fatema and Pranav, 
+Wednesday 2:20 PM to 5:20 PM:		Raluca and Rana, Chi and Ibrahim, 
+Wednesday 5:20 PM to 8:20 PM:		Aman and Akshitha, Avni and Ajay, 
+Wednesday 8:20 PM to 11:20 PM:	Michael A, Sylvie T, 
 Thursday 8:20 AM to 11:20 AM:		Khadeeja and Daphnne, Ashwin K, 
 Thursday 11:20 AM to 2:20 PM:		Shabbir and Hitankshini, 
-Thursday 2:20 PM to 5:20 PM:		Rakshak and Cyric, Amogh B, 
-Thursday 5:20 PM to 8:20 PM:		Hana K, Aman and Nitin, 
-Thursday 8:20 PM to 11:20 PM:		Mrudula and Victoria, Syed R, 
+Thursday 2:20 PM to 5:20 PM:		Alicia and Cyric, Rakshak and Willow, 
+Thursday 5:20 PM to 8:20 PM:		Hana K, Sruthi N, 
+Thursday 8:20 PM to 11:20 PM:		Ani and Amy, Rakshak and Willow, 
 Friday 8:20 AM to 11:20 AM:		Armaan S, Hana A, 
 Friday 11:20 AM to 2:20 PM:		Tisha G, 
 Friday 2:20 PM to 5:20 PM:		Andrew V, Crystal P, 
-Friday 5:20 PM to 8:20 PM:		Mrudula and Victoria, Akilan and Deepa, 
-Friday 8:20 PM to 11:20 PM:		Hanak and Sanjana, Aru and Ajay, 
-Saturday 8:20 AM to 11:20 AM:		Sruthi P, Sylvie T, 
-Saturday 11:20 AM to 2:20 PM:		Aadil R, Durga and Amy, 
-Saturday 2:20 PM to 5:20 PM:		Chika and Chandralekha, 
+Friday 5:20 PM to 8:20 PM:		Akilan and Deepa, Mrudula and Divya, 
+Friday 8:20 PM to 11:20 PM:		Mrudula and Divya, Hanak and Nitin, 
+Saturday 8:20 AM to 11:20 AM:		Aru and Hamshitha, Sruthi P, 
+Saturday 11:20 AM to 2:20 PM:		Aadil R, Aru and Hamshitha, 
+Saturday 2:20 PM to 5:20 PM:		Chika and Sanjana, 
 Saturday 5:20 PM to 8:20 PM:	
-Saturday 8:20 PM to 11:20 PM:		Chika and Chandralekha, 
+Saturday 8:20 PM to 11:20 PM:		Chika and Sanjana, 
 Sunday 8:20 AM to 11:20 AM:		Jagannath R, 
-Sunday 11:20 AM to 2:20 PM:		Avni and Willow, 
-Sunday 2:20 PM to 5:20 PM:		Rohita and Deepti, 
-Sunday 5:20 PM to 8:20 PM:		Rohita and Deepti, 
-Sunday 8:20 PM to 11:20 PM:		Durga and Amy, 
-Unable to assign shift for Sruthi N
+Sunday 11:20 AM to 2:20 PM:		Durga and Victoria, 
+Sunday 2:20 PM to 5:20 PM:		Rohita and Chandralekha, 
+Sunday 5:20 PM to 8:20 PM:		Rohita and Chandralekha, 
+Sunday 8:20 PM to 11:20 PM:		Durga and Victoria, Amogh B, 
 
