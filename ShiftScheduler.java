@@ -291,10 +291,25 @@ public class ShiftScheduler {
 			}
 		}
 
-		// Execute the program only if there are an equal number of EMT-1s and FTOs
+		// Make sure that each EMT-1 and FTO has at least 2 availabilities (for two
+		// shifts)
+		boolean enough = true;
+		for (int i = 0; i < emt1.size(); i++) {
+			if (emt1.get(i).getAvailability().size() < 2) {
+				System.out.println(emt1.get(i).getName() + " does not have 2 availabilities\n");
+			} else if (fto.get(i).getAvailability().size() < 2) {
+				System.out.println(fto.get(i).getName() + " does not have 2 availabilities\n");
+				enough = false;
+			}
+		}
+
+		// Execute the program only if there are an equal number of EMT-1s and FTOs and
+		// there are enough availabilities
 		if (emt1.size() != fto.size()) {
 			System.out.println("Error: cannot generate schedule");
 			System.out.println("The number of FTOs and EMT-1s are not equal");
+		} else if (!enough) {
+			System.out.println("One or more employees do not have enough availabilities\nCannot generate schedule\n");
 		} else {
 			int numUnassigned = 0;
 			ShiftScheduler shiftScheduler = new ShiftScheduler(new Employee[2]);
@@ -338,7 +353,7 @@ public class ShiftScheduler {
 				System.out.println("EMTs with unassigned shifts are listed at the bottom");
 				System.out.println("You may run the program again to generate a different schedule\n\n");
 			}
-			
+
 			// Print out the EMT-1/FTO pairs that were generated
 			System.out.println("FTO and EMT-1 Pairs:");
 			System.out.println("Pairs generated: " + pairs.size() + "\n");
@@ -525,8 +540,24 @@ class Employee {
 	}
 
 	// This method specified whether an employee is scheduled to work at a shift
+	// If it's okay to have spread-out shifts on same day, delete !sameDay part
 	public boolean isAvailable(int shift) {
-		return !active.get(availability.indexOf(shift));
+		return !active.get(availability.indexOf(shift)) && !sameDay(shift);
+	}
+
+	// This method returns whether the employee already has a shift on the same day
+	// (back-to-back is acceptable)
+	private boolean sameDay(int shift) {
+		int lower = shift - (shift % 5);
+		int upper = shift + (4 - (shift % 5));
+		for (int s = lower; s <= upper; s++) {
+			if (availability.indexOf(s) != -1) {
+				if (active.get(availability.indexOf(s)) && Math.abs(s - shift) > 1) {
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 
 	// toString method for printing
